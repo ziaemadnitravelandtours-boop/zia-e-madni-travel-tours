@@ -1,0 +1,16 @@
+# Cloudflare Pages custom headers: https://developers.cloudflare.com/pages/configuration/headers/
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Page itself: always revalidate so edits go live immediately
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Images, icons, logos, video (file names are not hashed, so keep the cache to 1 day)
+/assets/*
+  Cache-Control: public, max-age=86400

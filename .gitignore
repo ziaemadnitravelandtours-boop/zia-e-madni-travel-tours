@@ -1,0 +1,12 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Cloudflare / Node tooling (not needed for this static site)
+node_modules/
+.wrangler/
+.dev.vars
+.env
